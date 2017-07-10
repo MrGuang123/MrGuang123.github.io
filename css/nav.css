@@ -1,0 +1,95 @@
+.special-nav * {
+  box-sizing: border-box;
+}
+
+.special-nav .control-btn {
+  width: 10vw;
+  height: 10vw;
+  position: fixed;
+  right: -5vw;
+  bottom: -5vw;
+  font-size: 16px;
+  line-height: 6vw;
+  padding-left: 2.5vw;
+  background-color: rgba(0, 0, 0, .5);
+  color: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 11;
+  border: 2px solid rgba(0, 0, 0, .6);
+}
+
+.list-wrapper {
+  width: 30vw;
+  height: 30vw;
+  position: fixed;
+  /* top: 50%;
+      left: 50%;
+      margin-left: -15vw;
+      margin-top: -15vw; */
+  right: -15vw;
+  bottom: -15vw;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 1s linear;
+  display: none;
+  z-index: 10;
+}
+
+.list-wrapper ul {
+  margin: 0;
+  padding: 0;
+}
+
+.list-wrapper li {
+  list-style: none;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  transform-origin: 100% 100%;
+  overflow: hidden;
+}
+
+.list-wrapper li a {
+  transform: skew(-61deg) rotate(-75deg);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 150%;
+  height: 150%;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+}
+
+.list-wrapper li:hover {
+  background-color: rgba(50, 50, 50, .5);
+}
+
+.list-wrapper li:nth-child(1) {
+  transform: rotateZ(0deg) skew(61deg);
+}
+
+.list-wrapper li:nth-child(2) {
+  transform: rotateZ(30deg) skew(61deg);
+}
+
+.list-wrapper li:nth-child(3) {
+  transform: rotateZ(60deg) skew(61deg);
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+  z-index: 2;
+}
